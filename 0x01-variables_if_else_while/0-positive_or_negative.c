@@ -2,18 +2,22 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+int main(void)
+{
 	    int n;
-	        srand(time(0));
-		    n = rand() % RAND_MAX;
 
-		        printf("%d is ", n);
+	        srand(time(0));
+		    n = rand() - RAND_MAX / 2;
+
+		        printf("%d ", n);
+
 			    if (n > 0) {
-				            printf("positive\n");
+				            printf("is positive\n");
 					        } else if (n == 0) {
-							        printf("zero\n");
+							        printf("is zero\n");
 								    } else {
-									            printf("negative\n");
+									            printf("is negative\n");
 										        }
-			        return 0;
+
+			        return (0);
 }
