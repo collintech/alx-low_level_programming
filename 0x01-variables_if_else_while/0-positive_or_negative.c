@@ -1,6 +1,15 @@
-#include <stdio.h>
+/* This is a program that generates a random number and prints whether
+ *    it is positive, negative, or zero. */
+
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
+
+/**
+ *  * main - entry point of the program
+ *   *
+ *    * Return: 0 on success
+ *     */
 
 int main(void)
 {
@@ -11,13 +20,18 @@ int main(void)
 
 		        printf("%d ", n);
 
-			    if (n > 0) {
-				            printf("is positive\n");
-					        } else if (n == 0) {
-							        printf("is zero\n");
-								    } else {
-									            printf("is negative\n");
-										        }
+			    if (n > 0)
+				        {
+						        printf("is positive\n");
+							    }
+			        else if (n == 0)
+					    {
+						            printf("is zero\n");
+							        }
+				    else
+					        {
+							        printf("is negative\n");
+								    }
 
-			        return (0);
+				        return (0);
 }
