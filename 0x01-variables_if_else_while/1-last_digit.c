@@ -16,8 +16,8 @@ int main(void)
 	int last_digit;
 
 	srand(time(0));
-	n = rand() % 100 + 1;
-	last_digit = n % 10;
+	n = rand() % 201 - 100;
+	last_digit =abs(n % 10);
 
 	printf("Last didgit of %d is %d and is ", n, last_digit);
 
