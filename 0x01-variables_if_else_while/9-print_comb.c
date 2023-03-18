@@ -11,20 +11,26 @@
 
 int main()
 {
-	int i, j, k;
-	for (i = 0; i <= 9; i++) {
-		for (j = i + 1; j <= 9; j++) {
-			for (k = j + 1; k <= 9; k++) {
-				putchar(i + '0');
-				putchar(',');
-				putchar(' ');
-				putchar(j + '0');
+	int i, j, k, l;
+
+	for (i = 0; i < 10; i++) {
+		putchar(i + '0');
+		for (j = i + 1; j < 10; j++) {
+			putchar(',');
+			putchar(' ');
+			putchar(j + '0');
+			for (k = j + 1; k < 10; k++) {
 				putchar(',');
 				putchar(' ');
 				putchar(k + '0');
-				putchar('\n');
+				for (l = k + 1; l < 10; l++) {
+					putchar(',');
+					putchar(' ');
+					putchar(l + '0');
+				}
 			}
 		}
 	}
+
 	return 0;
 }
