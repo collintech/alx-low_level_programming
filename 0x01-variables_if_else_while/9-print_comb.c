@@ -9,37 +9,22 @@
  *
  */
 
-int main(void)
-
+int main()
 {
-
-	int i, j;
-
-	for (i = 0; i < 10; i++)
-
-	{
-
-	    for (j = i; j < 10; j++)
-
-	    {
-
-		putchar(i + '0');
-		putchar(j + '0');
-
-		if (i != 9 || j != 9)
-
-		{
-		    putchar(',');
-		    putchar(' ');
-
+	int i, j, k;
+	for (i = 0; i <= 9; i++) {
+		for (j = i + 1; j <= 9; j++) {
+			for (k = j + 1; k <= 9; k++) {
+				putchar(i + '0');
+				putchar(',');
+				putchar(' ');
+				putchar(j + '0');
+				putchar(',');
+				putchar(' ');
+				putchar(k + '0');
+				putchar('\n');
+			}
 		}
-		
-	    }
-
 	}
-
-	putchar('\n');
-
-	return (0);
-
+	return 0;
 }
