@@ -1,2 +1,7 @@
-#include <stdio.h> 
-int main(void) { printf("With proper grammar, but the outcome is a piece of art,\n"); return(0);}
+#include <stdio.h>
+/* Description: main - This is the entry point of your code */
+int main(void)
+{
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+	return (0);
+}
