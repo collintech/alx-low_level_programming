@@ -1,5 +1,8 @@
 #include <stdio.h>
-/* Description: main - This is the entry point of your code */
+/**
+ * function - main
+ * Description - The entry point of my program
+ */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
