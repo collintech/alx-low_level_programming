@@ -1,27 +1,27 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * main - Entry point
- *
+ * abs - This returns the absolute value of an argument
+ * num - This is a placeholder for the subject matter.
  * Return: Always 0
  */
-int print_last_digit(int num);
+int _abs(int num);
 
-int main() {
-	int num = -354;
-	int result;
+int main(void)
+{
+	int x = -5;
+	int y = 10;
 
-	result = print_last_digit(num);
-	printf("\n");
-
-	return 0;
+	printf("The absolute value of %d is %d\n", x, _abs(x));
+	printf("The absolute value of %d is %d\n", y, _abs(y));
+	return (0);
 }
 
-int print_last_digit(int num) {
-	int last_digit = num % 10;
-
-	if (last_digit < 0) {
-		last_digit *= -1;
-	}
-	printf("%d", last_digit);
-	return last_digit;
+int _abs(int num)
+{
+	if (num < 0)
+		return (-num);
+	else
+		return (num);
 }

@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  *
@@ -6,20 +8,20 @@
  */
 int print_last_digit(int num);
 
-int main() {
-	int num = -354;
-	int result;
+int main()
+{
+	int x = 1234;
+	int y = -5678;
 
-	result = print_last_digit(num);
-	printf("\n");
-	return 0;
+	print_last_digit(x);
+	print_last_digit(y);
+
+	return (0);
 }
-int print_last_digit(int num) {
-	int last_digit = num % 10;
 
-	if (last_digit < 0) {
-		last_digit *= -1;
-	}
-	printf("%d", last_digit);
+int print_last_digit(int num) {
+
+	int last_digit = abs(num) % 10;
+	printf("The last digit of %d is %d\n", num, last_digit);
 	return last_digit;
 }

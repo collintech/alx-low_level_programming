@@ -1,17 +1,18 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - check the code.
  *
  * Return: Always 0;
  */
-int_islower(int c);
+int _islower(int c);
 
 int main()
 {
 	char ch = 'A';
 	int result;
 
-	result = is_lower(ch);
+	result = _islower(ch);
 	if (result == 1) {
 		printf("The character %c is lowercase.\n", ch);
 	} else {
