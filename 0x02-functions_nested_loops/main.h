@@ -1,3 +1,6 @@
+#ifndef MYHEADER_H
+#define MYHEADER_H
+
 #include <unistd.h>
 
 /**
@@ -7,7 +10,10 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-extern int _putchar(char c)
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+ /* MYHEADER_H */
+#endif
