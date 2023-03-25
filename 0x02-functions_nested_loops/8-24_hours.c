@@ -1,22 +1,31 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * main - Entry point
- * %02d prints leading zero for single digits
- * Return: Always 0
+ * Jack_bauer - prints the minute of a day
+ * 
+ * Return: No return
  */
-void jack_bauer(void) {
-	int hour, minute;
+void jack_bauer(void)
+{
+	int a, b, c, d;
 
-	for (hour = 0; hour < 24; hour++) {
-		for (minute = 0; minute < 60; minute++) {
-			printf("%02d:%02d\n", hour, minute);
+	for (a = 0; a <= 2; a++)
+	{
+		for (b = 0; b <= 9; b++)
+		{
+			for (c = 0; c <= 5; c++)
+			{
+				for (d = 0; d <= 9; d++)
+				{
+					if (a >= 2 && b>= 4)
+						break;
+					_putchar(a + 48);
+					_putchar(b + 48);
+					_putchar(58);
+					_putchar(c + 48);
+					_putchar(d + 48);
+					_putchar('\n');
+				}
+			}
 		}
 	}
-}
-
-int main(void)
-{
-	jack_bauer();
-	return (0);
 }

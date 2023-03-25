@@ -1,31 +1,22 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - check the code.
+ * _islower - shows 1 if the input is a
+ * lowerCase character. Another cases, shows
+ * 0
+ * @c: The character in ASCII code
  *
- * Return: Always 0;
+ * Return: 1 for lowercase character. 0 for the rest.
  */
-int _islower(int c);
-
-int main()
+int _islower(int c)
 {
-	char ch = 'A';
-	int result;
-
-	result = _islower(ch);
-	if (result == 1) {
-		printf("The character %c is lowercase.\n", ch);
-	} else {
-		printf("The character %c is not lowercase.\n", ch);
+	if (c >= 97 && c <= 122)
+	{
+		return (1);
 	}
-
-	return 0;
-}
-
-int _islower(int c) {
-	if (c >= 'a' && c <= 'z') {
-		return 1;
-	} else {
-		return 0;
+       	else
+	{
+		return (0);
 	}
+	printf('\n');
 }
