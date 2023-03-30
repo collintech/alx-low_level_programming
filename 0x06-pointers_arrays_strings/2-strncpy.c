@@ -1,21 +1,27 @@
 #include "main.h"
-
 /**
- * dest - The destination string where the copied string will be stored
- * n - The maximum number of character to be copied
- * src - the source file where the copy is executed
+ * _strncpy - copy a string
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ *
+ * Return: dest
  */
-
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	int j;
+
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		dest[i] = src[i];
+		dest[j] = src[j];
+		j++;
 	}
-	for ( ; i < n; i++)
+	while (j < n)
 	{
-		dest[i] = '\0';
+		dest[j] = '\0';
+		j++;
 	}
-	return dest;
+
+	return (dest);
 }

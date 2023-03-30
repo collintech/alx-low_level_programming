@@ -1,24 +1,30 @@
-#include <string.h>
+#include "main.h"
+#include <stdio.h>
+
 /**
- * *rot13 - takes a null terminated string as input and returns
- * a pointer to the same sreing after encoding it using ROT13 Cipher.
- * return - returns str.
+ * rot13 - encoder rot13
+ * @s: pointer to string params
+ *
+ * Return: *s
  */
-char *rot13(char *str)
+
+char *rot13(char *s)
 {
-	char *p = str;
-	while (*p)
+	int i;
+	int j;
+	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		char c = *p;
-	if ((c >= 'a' && c <= 'm') || (c >= 'A' && c <= 'M'))
-	{
-		*p = c + 13;
+		for (j = 0; j < 52; j++)
+		{
+			if (s[i] == data1[j])
+			{
+				s[i] = datarot[j];
+				break;
+			}
+		}
 	}
-	else if ((c >= 'n' && c <= 'z') || (c >= 'N' && c <= 'Z'))
-	{
-		*p = c - 13;
-	}
-	p++;
-	}
-	return str;
+	return (s);
 }
